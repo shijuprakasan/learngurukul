@@ -1,0 +1,271 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Learn Gurukul</title>
+
+    <link rel="canonical" href="https://getbootstrap.comexamples/cover/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#563d7c">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/chess.js"></script>
+    <script src="scripts/chessboard.js"></script>
+
+    <script>
+
+    </script>
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .frontpage_square_white {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 100%;
+            background-color: white;
+        }
+
+        .frontpage_square_black {
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 100%;
+            background-color: dodgerblue;
+        }
+
+        .frontpage_square img {
+            position: absolute;
+        }
+
+        .square {
+            width: 100%;
+            padding-bottom: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .board-main {
+            width: 100%;
+            height: 100%;
+            min-width: 32px;
+            min-height: 320px;
+        }
+
+        .box-container {
+            /*background-color: red;*/
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            position: relative; /* If you want text inside of it */
+        }
+
+        .box-black {
+            /*width:12.5%;
+            height:12.5%;*/
+            background-color: burlywood;
+            border: solid;
+            border-color: dimgrey;
+        }
+
+        .box-white {
+            /*width:12.5%;
+            height:12.5%;*/
+            background-color: white;
+            border: solid;
+            border-color: dimgrey;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="content/cover.css" rel="stylesheet">
+</head>
+<body class="text-center">
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm">
+                            <a class="nav-link active" href="/#">Home</a>
+                        </div>
+                        <div class="col-sm">
+                            <h3 class="masthead-brand">Let's Chess</h3>
+                        </div>
+                    </div>
+                    <!--<button onclick="restart()" type="button" class="btn btn-primary">Start</button>-->
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <button onclick="restart()" type="button" class="btn btn-primary">Offline</button>
+                        </div>
+                        <div class="col-xs-1">
+                            &nbsp;
+                        </div>
+                        <div class="col-xs-2">
+                            <button onclick="Start()" type="button" class="btn btn-primary">Start</button>
+                        </div>
+                        <div class="col-xs-1">
+                            &nbsp;
+                        </div>
+                        <div class="col-xs-6">
+                            <input type="text" id="gid" />
+                        </div>
+                        <div class="col-xs-2 float-right">
+                            <button onclick="Join()" type="button" class="btn btn-primary">Join</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main role="main" class="board-main">
+
+            <div class="container-fluid">
+                <table class="box-container">
+                    <tr class="d-flex">
+                        <td id="td_18" class="col-xs-1 box-white"><button id="btn_18" onclick="boxClicked(1, 8)" type="button" class="btn btn-outline-info"><img id="loc_18" width="32" height="32" src="assets/img/b_r.svg" /></button></td>
+                        <td id="td_28" class="col-xs-1 box-black"><button id="btn_28" onclick="boxClicked(2, 8)" type="button" class="btn btn-outline-info"><img id="loc_28" width="32" height="32" src="assets/img/b_n.svg" /></button></td>
+                        <td id="td_38" class="col-xs-1 box-white"><button id="btn_38" onclick="boxClicked(3, 8)" type="button" class="btn btn-outline-info"><img id="loc_38" width="32" height="32" src="assets/img/b_b.svg" /></button></td>
+                        <td id="td_48" class="col-xs-1 box-black"><button id="btn_48" onclick="boxClicked(4, 8)" type="button" class="btn btn-outline-info"><img id="loc_48" width="32" height="32" src="assets/img/b_q.svg" /></button></td>
+                        <td id="td_58" class="col-xs-1 box-white"><button id="btn_58" onclick="boxClicked(5, 8)" type="button" class="btn btn-outline-info"><img id="loc_58" width="32" height="32" src="assets/img/b_k.svg" /></button></td>
+                        <td id="td_68" class="col-xs-1 box-black"><button id="btn_68" onclick="boxClicked(6, 8)" type="button" class="btn btn-outline-info"><img id="loc_68" width="32" height="32" src="assets/img/b_b.svg" /></button></td>
+                        <td id="td_78" class="col-xs-1 box-white"><button id="btn_78" onclick="boxClicked(7, 8)" type="button" class="btn btn-outline-info"><img id="loc_78" width="32" height="32" src="assets/img/b_n.svg" /></button></td>
+                        <td id="td_88" class="col-xs-1 box-black"><button id="btn_88" onclick="boxClicked(8, 8)" type="button" class="btn btn-outline-info"><img id="loc_88" width="32" height="32" src="assets/img/b_r.svg" /></button></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td id="td_17" class="col-xs-1 box-black"><button id="btn_17" onclick="boxClicked(1, 7)" type="button" class="btn btn-outline-info"><img id="loc_17" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                        <td id="td_27" class="col-xs-1 box-white"><button id="btn_27" onclick="boxClicked(2, 7)" type="button" class="btn btn-outline-info"><img id="loc_27" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                        <td id="td_37" class="col-xs-1 box-black"><button id="btn_37" onclick="boxClicked(3, 7)" type="button" class="btn btn-outline-info"><img id="loc_37" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                        <td id="td_47" class="col-xs-1 box-white"><button id="btn_47" onclick="boxClicked(4, 7)" type="button" class="btn btn-outline-info"><img id="loc_47" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                        <td id="td_57" class="col-xs-1 box-black"><button id="btn_57" onclick="boxClicked(5, 7)" type="button" class="btn btn-outline-info"><img id="loc_57" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                        <td id="td_67" class="col-xs-1 box-white"><button id="btn_67" onclick="boxClicked(6, 7)" type="button" class="btn btn-outline-info"><img id="loc_67" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                        <td id="td_77" class="col-xs-1 box-black"><button id="btn_77" onclick="boxClicked(7, 7)" type="button" class="btn btn-outline-info"><img id="loc_77" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                        <td id="td_87" class="col-xs-1 box-white"><button id="btn_87" onclick="boxClicked(8, 7)" type="button" class="btn btn-outline-info"><img id="loc_87" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td id="td_16" class="col-xs-1 box-white"><button id="btn_16" onclick="boxClicked(1, 6)" type="button" class="btn btn-outline-info"><img id="loc_16" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_26" class="col-xs-1 box-black"><button id="btn_26" onclick="boxClicked(2, 6)" type="button" class="btn btn-outline-info"><img id="loc_26" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_36" class="col-xs-1 box-white"><button id="btn_36" onclick="boxClicked(3, 6)" type="button" class="btn btn-outline-info"><img id="loc_36" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_46" class="col-xs-1 box-black"><button id="btn_46" onclick="boxClicked(4, 6)" type="button" class="btn btn-outline-info"><img id="loc_46" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_56" class="col-xs-1 box-white"><button id="btn_56" onclick="boxClicked(5, 6)" type="button" class="btn btn-outline-info"><img id="loc_56" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_66" class="col-xs-1 box-black"><button id="btn_66" onclick="boxClicked(6, 6)" type="button" class="btn btn-outline-info"><img id="loc_66" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_76" class="col-xs-1 box-white"><button id="btn_76" onclick="boxClicked(7, 6)" type="button" class="btn btn-outline-info"><img id="loc_76" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_86" class="col-xs-1 box-black"><button id="btn_86" onclick="boxClicked(8, 6)" type="button" class="btn btn-outline-info"><img id="loc_86" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td id="td_15" class="col-xs-1 box-black"><button id="btn_15" onclick="boxClicked(1, 5)" type="button" class="btn btn-outline-info"><img id="loc_15" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_25" class="col-xs-1 box-white"><button id="btn_25" onclick="boxClicked(2, 5)" type="button" class="btn btn-outline-info"><img id="loc_25" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_35" class="col-xs-1 box-black"><button id="btn_35" onclick="boxClicked(3, 5)" type="button" class="btn btn-outline-info"><img id="loc_35" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_45" class="col-xs-1 box-white"><button id="btn_45" onclick="boxClicked(4, 5)" type="button" class="btn btn-outline-info"><img id="loc_45" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_55" class="col-xs-1 box-black"><button id="btn_55" onclick="boxClicked(5, 5)" type="button" class="btn btn-outline-info"><img id="loc_55" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_65" class="col-xs-1 box-white"><button id="btn_65" onclick="boxClicked(6, 5)" type="button" class="btn btn-outline-info"><img id="loc_65" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_75" class="col-xs-1 box-black"><button id="btn_75" onclick="boxClicked(7, 5)" type="button" class="btn btn-outline-info"><img id="loc_75" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_85" class="col-xs-1 box-white"><button id="btn_85" onclick="boxClicked(8, 5)" type="button" class="btn btn-outline-info"><img id="loc_85" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td id="td_14" class="col-xs-1 box-white"><button id="btn_14" onclick="boxClicked(1, 4)" type="button" class="btn btn-outline-info"><img id="loc_14" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_24" class="col-xs-1 box-black"><button id="btn_24" onclick="boxClicked(2, 4)" type="button" class="btn btn-outline-info"><img id="loc_24" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_34" class="col-xs-1 box-white"><button id="btn_34" onclick="boxClicked(3, 4)" type="button" class="btn btn-outline-info"><img id="loc_34" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_44" class="col-xs-1 box-black"><button id="btn_44" onclick="boxClicked(4, 4)" type="button" class="btn btn-outline-info"><img id="loc_44" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_54" class="col-xs-1 box-white"><button id="btn_54" onclick="boxClicked(5, 4)" type="button" class="btn btn-outline-info"><img id="loc_54" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_64" class="col-xs-1 box-black"><button id="btn_64" onclick="boxClicked(6, 4)" type="button" class="btn btn-outline-info"><img id="loc_64" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_74" class="col-xs-1 box-white"><button id="btn_74" onclick="boxClicked(7, 4)" type="button" class="btn btn-outline-info"><img id="loc_74" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_84" class="col-xs-1 box-black"><button id="btn_84" onclick="boxClicked(8, 4)" type="button" class="btn btn-outline-info"><img id="loc_84" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td id="td_13" class="col-xs-1 box-black"><button id="btn_13" onclick="boxClicked(1, 3)" type="button" class="btn btn-outline-info"><img id="loc_13" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_23" class="col-xs-1 box-white"><button id="btn_23" onclick="boxClicked(2, 3)" type="button" class="btn btn-outline-info"><img id="loc_23" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_33" class="col-xs-1 box-black"><button id="btn_33" onclick="boxClicked(3, 3)" type="button" class="btn btn-outline-info"><img id="loc_33" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_43" class="col-xs-1 box-white"><button id="btn_43" onclick="boxClicked(4, 3)" type="button" class="btn btn-outline-info"><img id="loc_43" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_53" class="col-xs-1 box-black"><button id="btn_53" onclick="boxClicked(5, 3)" type="button" class="btn btn-outline-info"><img id="loc_53" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_63" class="col-xs-1 box-white"><button id="btn_63" onclick="boxClicked(6, 3)" type="button" class="btn btn-outline-info"><img id="loc_63" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_73" class="col-xs-1 box-black"><button id="btn_73" onclick="boxClicked(7, 3)" type="button" class="btn btn-outline-info"><img id="loc_73" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                        <td id="td_83" class="col-xs-1 box-white"><button id="btn_83" onclick="boxClicked(8, 3)" type="button" class="btn btn-outline-info"><img id="loc_83" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td id="td_12" class="col-xs-1 box-white"><button id="btn_12" onclick="boxClicked(1, 2)" type="button" class="btn btn-outline-info"><img id="loc_12" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                        <td id="td_22" class="col-xs-1 box-black"><button id="btn_22" onclick="boxClicked(2, 2)" type="button" class="btn btn-outline-info"><img id="loc_22" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                        <td id="td_32" class="col-xs-1 box-white"><button id="btn_32" onclick="boxClicked(3, 2)" type="button" class="btn btn-outline-info"><img id="loc_32" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                        <td id="td_42" class="col-xs-1 box-black"><button id="btn_42" onclick="boxClicked(4, 2)" type="button" class="btn btn-outline-info"><img id="loc_42" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                        <td id="td_52" class="col-xs-1 box-white"><button id="btn_52" onclick="boxClicked(5, 2)" type="button" class="btn btn-outline-info"><img id="loc_52" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                        <td id="td_62" class="col-xs-1 box-black"><button id="btn_62" onclick="boxClicked(6, 2)" type="button" class="btn btn-outline-info"><img id="loc_62" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                        <td id="td_72" class="col-xs-1 box-white"><button id="btn_72" onclick="boxClicked(7, 2)" type="button" class="btn btn-outline-info"><img id="loc_72" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                        <td id="td_82" class="col-xs-1 box-black"><button id="btn_82" onclick="boxClicked(8, 2)" type="button" class="btn btn-outline-info"><img id="loc_82" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                    </tr>
+
+                    <tr class="d-flex">
+                        <td id="td_11" class="col-xs-1 box-black"><button id="btn_11" onclick="boxClicked(1, 1)" type="button" class="btn btn-outline-info"><img id="loc_11" width="32" height="32" src="assets/img/w_r.svg" /></button></td>
+                        <td id="td_21" class="col-xs-1 box-white"><button id="btn_21" onclick="boxClicked(2, 1)" type="button" class="btn btn-outline-info"><img id="loc_21" width="32" height="32" src="assets/img/w_n.svg" /></button></td>
+                        <td id="td_31" class="col-xs-1 box-black"><button id="btn_31" onclick="boxClicked(3, 1)" type="button" class="btn btn-outline-info"><img id="loc_31" width="32" height="32" src="assets/img/w_b.svg" /></button></td>
+                        <td id="td_41" class="col-xs-1 box-white"><button id="btn_41" onclick="boxClicked(4, 1)" type="button" class="btn btn-outline-info"><img id="loc_41" width="32" height="32" src="assets/img/w_q.svg" /></button></td>
+                        <td id="td_51" class="col-xs-1 box-black"><button id="btn_51" onclick="boxClicked(5, 1)" type="button" class="btn btn-outline-info"><img id="loc_51" width="32" height="32" src="assets/img/w_k.svg" /></button></td>
+                        <td id="td_61" class="col-xs-1 box-white"><button id="btn_61" onclick="boxClicked(6, 1)" type="button" class="btn btn-outline-info"><img id="loc_61" width="32" height="32" src="assets/img/w_b.svg" /></button></td>
+                        <td id="td_71" class="col-xs-1 box-black"><button id="btn_71" onclick="boxClicked(7, 1)" type="button" class="btn btn-outline-info"><img id="loc_71" width="32" height="32" src="assets/img/w_n.svg" /></button></td>
+                        <td id="td_81" class="col-xs-1 box-white"><button id="btn_81" onclick="boxClicked(8, 1)" type="button" class="btn btn-outline-info"><img id="loc_81" width="32" height="32" src="assets/img/w_r.svg" /></button></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="container-fluid" style="height: 30em;">
+                <div class="row">
+                    <div class="col-sm"><b>Instructions</b></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm" id="_message"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm"><b>Moves</b></div>
+                </div>
+                <div class="row" id="_allmoves">
+
+                </div>
+                <div class="row">
+                    <div class="col-sm"><b>Removed</b></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6" id="_notonboardw"></div>
+                    <div class="col-sm-6" id="_notonboardb"></div>
+                </div>
+            </div>
+
+            <footer class="mastfoot mt-auto" style="margin-top: 1em;">
+                <div class="inner">
+                    <p>Reach us by Email: <a href="mailto:mshubha123@gmail.com">mshubha123@gmail.com</a>, Phone: <a href="tel:+91 9686622751">+91 9686622751</a>.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

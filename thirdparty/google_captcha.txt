@@ -1,0 +1,12 @@
+SK: 6LdVp_gUAAAAAL6i6wOZNjsLo1rKf6_xE7DXOAwx
+
+6LdVp_gUAAAAAB5l9h9DKXA3DQV6z3cuS5Fct9XB
+
+
+http://learngurukul.com/.well-known/acme-challenge/XgQNiiWaOp85smNoRLU5V6a1TqCtE7GsK332_iRQK6Q
+http://www.learngurukul.com/.well-known/acme-challenge/w9Ip2vetMQNop4roiaDVQQHJrqrzTyJshBTWJWZlMt4
+
+
+sudo letsencrypt certonly -a webroot --webroot-path=/home/LGSite -d learngurukul.com -d www.learngurukul.com
+
+https://medium.com/@abhaytalreja/configure-digital-ocean-for-ssl-https-meteor-app-as-a-bonus-part-4-6b5a00b581ef

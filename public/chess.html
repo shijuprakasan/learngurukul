@@ -1,0 +1,334 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="apple-touch-icon" href="/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+    <link rel="icon" href="assets/img/favicons/favicon.ico">
+    <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <style>
+        .box-container {
+            /*background-color: red;*/
+            width: 100%;
+            padding-top: 100%; /* 1:1 Aspect Ratio */
+            position: relative; /* If you want text inside of it */
+        }
+
+        .box-cell-f {
+            width: 12.5%;
+            text-align: center;
+            color: coral;
+        }
+
+        .box-cell-r {
+            width: 12.5%;
+            padding-top: 10px;
+            color: coral;
+        }
+
+        .box-black {
+            /*width:12.5%;
+            height:12.5%;*/
+            background-color: burlywood;
+            border: solid;
+            border-color: dimgrey;
+        }
+
+        .box-white {
+            /*width:12.5%;
+            height:12.5%;*/
+            background-color: white;
+            border: solid;
+            border-color: dimgrey;
+        }
+
+        .box-highlight {
+            background-color: yellow;
+        }
+
+        .chess-board-grid {
+            box-sizing: content-box;
+        }
+    </style>
+
+    <title>Let's Chess!</title>
+</head>
+<body>
+    <div class="container">
+        <blockquote class="blockquote text-center">
+            <h3>Let's Chess<span class="badge badge-secondary">BETA</span></h3>
+            <footer class="blockquote-footer"><a href="/#">Go to <cite title="Source Title">Learn Gurukul</cite></a></footer>
+        </blockquote>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-8 col-md-10 col-sm-12">
+                <div class="row">
+                    <div class="col">
+
+                        <table class="chess-board-grid">
+                            <tr class="d-flex">
+                                <td>&nbsp;</td>
+                                <th id='filet_1' class="box-cell-f">A</th>
+                                <th id='filet_2' class="box-cell-f">B</th>
+                                <th id='filet_3' class="box-cell-f">C</th>
+                                <th id='filet_4' class="box-cell-f">D</th>
+                                <th id='filet_5' class="box-cell-f">E</th>
+                                <th id='filet_6' class="box-cell-f">F</th>
+                                <th id='filet_7' class="box-cell-f">G</th>
+                                <th id='filet_8' class="box-cell-f">H</th>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr class="d-flex">
+                                <th id='rankl_8' class="box-cell-r">8</th>
+                                <td id="td_18" class="col-xs-1 box-white"><button id="btn_18" onclick="boxClicked(1, 8)" type="button" class="btn btn-outline-info"><img id="loc_18" width="32" height="32" src="assets/img/b_r.svg" /></button></td>
+                                <td id="td_28" class="col-xs-1 box-black"><button id="btn_28" onclick="boxClicked(2, 8)" type="button" class="btn btn-outline-info"><img id="loc_28" width="32" height="32" src="assets/img/b_n.svg" /></button></td>
+                                <td id="td_38" class="col-xs-1 box-white"><button id="btn_38" onclick="boxClicked(3, 8)" type="button" class="btn btn-outline-info"><img id="loc_38" width="32" height="32" src="assets/img/b_b.svg" /></button></td>
+                                <td id="td_48" class="col-xs-1 box-black"><button id="btn_48" onclick="boxClicked(4, 8)" type="button" class="btn btn-outline-info"><img id="loc_48" width="32" height="32" src="assets/img/b_q.svg" /></button></td>
+                                <td id="td_58" class="col-xs-1 box-white"><button id="btn_58" onclick="boxClicked(5, 8)" type="button" class="btn btn-outline-info"><img id="loc_58" width="32" height="32" src="assets/img/b_k.svg" /></button></td>
+                                <td id="td_68" class="col-xs-1 box-black"><button id="btn_68" onclick="boxClicked(6, 8)" type="button" class="btn btn-outline-info"><img id="loc_68" width="32" height="32" src="assets/img/b_b.svg" /></button></td>
+                                <td id="td_78" class="col-xs-1 box-white"><button id="btn_78" onclick="boxClicked(7, 8)" type="button" class="btn btn-outline-info"><img id="loc_78" width="32" height="32" src="assets/img/b_n.svg" /></button></td>
+                                <td id="td_88" class="col-xs-1 box-black"><button id="btn_88" onclick="boxClicked(8, 8)" type="button" class="btn btn-outline-info"><img id="loc_88" width="32" height="32" src="assets/img/b_r.svg" /></button></td>
+                                <th id='rankr_8' class="box-cell-r">8</th>
+                            </tr>
+
+                            <tr class="d-flex">
+                                <th id='rankl_7' class="box-cell-r">7</th>
+                                <td id="td_17" class="col-xs-1 box-black"><button id="btn_17" onclick="boxClicked(1, 7)" type="button" class="btn btn-outline-info"><img id="loc_17" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                                <td id="td_27" class="col-xs-1 box-white"><button id="btn_27" onclick="boxClicked(2, 7)" type="button" class="btn btn-outline-info"><img id="loc_27" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                                <td id="td_37" class="col-xs-1 box-black"><button id="btn_37" onclick="boxClicked(3, 7)" type="button" class="btn btn-outline-info"><img id="loc_37" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                                <td id="td_47" class="col-xs-1 box-white"><button id="btn_47" onclick="boxClicked(4, 7)" type="button" class="btn btn-outline-info"><img id="loc_47" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                                <td id="td_57" class="col-xs-1 box-black"><button id="btn_57" onclick="boxClicked(5, 7)" type="button" class="btn btn-outline-info"><img id="loc_57" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                                <td id="td_67" class="col-xs-1 box-white"><button id="btn_67" onclick="boxClicked(6, 7)" type="button" class="btn btn-outline-info"><img id="loc_67" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                                <td id="td_77" class="col-xs-1 box-black"><button id="btn_77" onclick="boxClicked(7, 7)" type="button" class="btn btn-outline-info"><img id="loc_77" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                                <td id="td_87" class="col-xs-1 box-white"><button id="btn_87" onclick="boxClicked(8, 7)" type="button" class="btn btn-outline-info"><img id="loc_87" width="32" height="32" src="assets/img/b_p.svg" /></button></td>
+                                <th id='rankr_7' class="box-cell-r">7</th>
+                            </tr>
+
+                            <tr class="d-flex">
+                                <th id='rankl_6' class="box-cell-r">6</th>
+                                <td id="td_16" class="col-xs-1 box-white"><button id="btn_16" onclick="boxClicked(1, 6)" type="button" class="btn btn-outline-info"><img id="loc_16" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_26" class="col-xs-1 box-black"><button id="btn_26" onclick="boxClicked(2, 6)" type="button" class="btn btn-outline-info"><img id="loc_26" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_36" class="col-xs-1 box-white"><button id="btn_36" onclick="boxClicked(3, 6)" type="button" class="btn btn-outline-info"><img id="loc_36" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_46" class="col-xs-1 box-black"><button id="btn_46" onclick="boxClicked(4, 6)" type="button" class="btn btn-outline-info"><img id="loc_46" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_56" class="col-xs-1 box-white"><button id="btn_56" onclick="boxClicked(5, 6)" type="button" class="btn btn-outline-info"><img id="loc_56" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_66" class="col-xs-1 box-black"><button id="btn_66" onclick="boxClicked(6, 6)" type="button" class="btn btn-outline-info"><img id="loc_66" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_76" class="col-xs-1 box-white"><button id="btn_76" onclick="boxClicked(7, 6)" type="button" class="btn btn-outline-info"><img id="loc_76" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_86" class="col-xs-1 box-black"><button id="btn_86" onclick="boxClicked(8, 6)" type="button" class="btn btn-outline-info"><img id="loc_86" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <th id='rankr_6' class="box-cell-r">6</th>
+                            </tr>
+
+                            <tr class="d-flex">
+                                <th id='rankl_5' class="box-cell-r">5</th>
+                                <td id="td_15" class="col-xs-1 box-black"><button id="btn_15" onclick="boxClicked(1, 5)" type="button" class="btn btn-outline-info"><img id="loc_15" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_25" class="col-xs-1 box-white"><button id="btn_25" onclick="boxClicked(2, 5)" type="button" class="btn btn-outline-info"><img id="loc_25" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_35" class="col-xs-1 box-black"><button id="btn_35" onclick="boxClicked(3, 5)" type="button" class="btn btn-outline-info"><img id="loc_35" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_45" class="col-xs-1 box-white"><button id="btn_45" onclick="boxClicked(4, 5)" type="button" class="btn btn-outline-info"><img id="loc_45" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_55" class="col-xs-1 box-black"><button id="btn_55" onclick="boxClicked(5, 5)" type="button" class="btn btn-outline-info"><img id="loc_55" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_65" class="col-xs-1 box-white"><button id="btn_65" onclick="boxClicked(6, 5)" type="button" class="btn btn-outline-info"><img id="loc_65" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_75" class="col-xs-1 box-black"><button id="btn_75" onclick="boxClicked(7, 5)" type="button" class="btn btn-outline-info"><img id="loc_75" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_85" class="col-xs-1 box-white"><button id="btn_85" onclick="boxClicked(8, 5)" type="button" class="btn btn-outline-info"><img id="loc_85" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <th id='rankr_5' class="box-cell-r">5</th>
+                            </tr>
+
+                            <tr class="d-flex">
+                                <th id='rankl_4' class="box-cell-r">4</th>
+                                <td id="td_14" class="col-xs-1 box-white"><button id="btn_14" onclick="boxClicked(1, 4)" type="button" class="btn btn-outline-info"><img id="loc_14" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_24" class="col-xs-1 box-black"><button id="btn_24" onclick="boxClicked(2, 4)" type="button" class="btn btn-outline-info"><img id="loc_24" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_34" class="col-xs-1 box-white"><button id="btn_34" onclick="boxClicked(3, 4)" type="button" class="btn btn-outline-info"><img id="loc_34" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_44" class="col-xs-1 box-black"><button id="btn_44" onclick="boxClicked(4, 4)" type="button" class="btn btn-outline-info"><img id="loc_44" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_54" class="col-xs-1 box-white"><button id="btn_54" onclick="boxClicked(5, 4)" type="button" class="btn btn-outline-info"><img id="loc_54" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_64" class="col-xs-1 box-black"><button id="btn_64" onclick="boxClicked(6, 4)" type="button" class="btn btn-outline-info"><img id="loc_64" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_74" class="col-xs-1 box-white"><button id="btn_74" onclick="boxClicked(7, 4)" type="button" class="btn btn-outline-info"><img id="loc_74" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_84" class="col-xs-1 box-black"><button id="btn_84" onclick="boxClicked(8, 4)" type="button" class="btn btn-outline-info"><img id="loc_84" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <th id='rankr_4' class="box-cell-r">4</th>
+                            </tr>
+
+                            <tr class="d-flex">
+                                <th id='rankl_3' class="box-cell-r">3</th>
+                                <td id="td_13" class="col-xs-1 box-black"><button id="btn_13" onclick="boxClicked(1, 3)" type="button" class="btn btn-outline-info"><img id="loc_13" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_23" class="col-xs-1 box-white"><button id="btn_23" onclick="boxClicked(2, 3)" type="button" class="btn btn-outline-info"><img id="loc_23" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_33" class="col-xs-1 box-black"><button id="btn_33" onclick="boxClicked(3, 3)" type="button" class="btn btn-outline-info"><img id="loc_33" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_43" class="col-xs-1 box-white"><button id="btn_43" onclick="boxClicked(4, 3)" type="button" class="btn btn-outline-info"><img id="loc_43" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_53" class="col-xs-1 box-black"><button id="btn_53" onclick="boxClicked(5, 3)" type="button" class="btn btn-outline-info"><img id="loc_53" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_63" class="col-xs-1 box-white"><button id="btn_63" onclick="boxClicked(6, 3)" type="button" class="btn btn-outline-info"><img id="loc_63" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_73" class="col-xs-1 box-black"><button id="btn_73" onclick="boxClicked(7, 3)" type="button" class="btn btn-outline-info"><img id="loc_73" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <td id="td_83" class="col-xs-1 box-white"><button id="btn_83" onclick="boxClicked(8, 3)" type="button" class="btn btn-outline-info"><img id="loc_83" width="32" height="32" src="assets/img/empty.svg" /></button></td>
+                                <th id='rankr_3' class="box-cell-r">3</th>
+                            </tr>
+
+                            <tr class="d-flex">
+                                <th id='rankl_2' class="box-cell-r">2</th>
+                                <td id="td_12" class="col-xs-1 box-white"><button id="btn_12" onclick="boxClicked(1, 2)" type="button" class="btn btn-outline-info"><img id="loc_12" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                                <td id="td_22" class="col-xs-1 box-black"><button id="btn_22" onclick="boxClicked(2, 2)" type="button" class="btn btn-outline-info"><img id="loc_22" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                                <td id="td_32" class="col-xs-1 box-white"><button id="btn_32" onclick="boxClicked(3, 2)" type="button" class="btn btn-outline-info"><img id="loc_32" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                                <td id="td_42" class="col-xs-1 box-black"><button id="btn_42" onclick="boxClicked(4, 2)" type="button" class="btn btn-outline-info"><img id="loc_42" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                                <td id="td_52" class="col-xs-1 box-white"><button id="btn_52" onclick="boxClicked(5, 2)" type="button" class="btn btn-outline-info"><img id="loc_52" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                                <td id="td_62" class="col-xs-1 box-black"><button id="btn_62" onclick="boxClicked(6, 2)" type="button" class="btn btn-outline-info"><img id="loc_62" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                                <td id="td_72" class="col-xs-1 box-white"><button id="btn_72" onclick="boxClicked(7, 2)" type="button" class="btn btn-outline-info"><img id="loc_72" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                                <td id="td_82" class="col-xs-1 box-black"><button id="btn_82" onclick="boxClicked(8, 2)" type="button" class="btn btn-outline-info"><img id="loc_82" width="32" height="32" src="assets/img/w_p.svg" /></button></td>
+                                <th id='rankr_2' class="box-cell-r">2</th>
+                            </tr>
+
+                            <tr class="d-flex">
+                                <th id='rankl_1' class="box-cell-r">1</th>
+                                <td id="td_11" class="col-xs-1 box-black"><button id="btn_11" onclick="boxClicked(1, 1)" type="button" class="btn btn-outline-info"><img id="loc_11" width="32" height="32" src="assets/img/w_r.svg" /></button></td>
+                                <td id="td_21" class="col-xs-1 box-white"><button id="btn_21" onclick="boxClicked(2, 1)" type="button" class="btn btn-outline-info"><img id="loc_21" width="32" height="32" src="assets/img/w_n.svg" /></button></td>
+                                <td id="td_31" class="col-xs-1 box-black"><button id="btn_31" onclick="boxClicked(3, 1)" type="button" class="btn btn-outline-info"><img id="loc_31" width="32" height="32" src="assets/img/w_b.svg" /></button></td>
+                                <td id="td_41" class="col-xs-1 box-white"><button id="btn_41" onclick="boxClicked(4, 1)" type="button" class="btn btn-outline-info"><img id="loc_41" width="32" height="32" src="assets/img/w_q.svg" /></button></td>
+                                <td id="td_51" class="col-xs-1 box-black"><button id="btn_51" onclick="boxClicked(5, 1)" type="button" class="btn btn-outline-info"><img id="loc_51" width="32" height="32" src="assets/img/w_k.svg" /></button></td>
+                                <td id="td_61" class="col-xs-1 box-white"><button id="btn_61" onclick="boxClicked(6, 1)" type="button" class="btn btn-outline-info"><img id="loc_61" width="32" height="32" src="assets/img/w_b.svg" /></button></td>
+                                <td id="td_71" class="col-xs-1 box-black"><button id="btn_71" onclick="boxClicked(7, 1)" type="button" class="btn btn-outline-info"><img id="loc_71" width="32" height="32" src="assets/img/w_n.svg" /></button></td>
+                                <td id="td_81" class="col-xs-1 box-white"><button id="btn_81" onclick="boxClicked(8, 1)" type="button" class="btn btn-outline-info"><img id="loc_81" width="32" height="32" src="assets/img/w_r.svg" /></button></td>
+                                <th id='rankr_1' class="box-cell-r">1</th>
+                            </tr>
+
+                            <tr class="d-flex">
+                                <td>&nbsp;</td>
+                                <th id='fileb_1' class="box-cell-f">A</th>
+                                <th id='fileb_2' class="box-cell-f">B</th>
+                                <th id='fileb_3' class="box-cell-f">C</th>
+                                <th id='fileb_4' class="box-cell-f">D</th>
+                                <th id='fileb_5' class="box-cell-f">E</th>
+                                <th id='fileb_6' class="box-cell-f">F</th>
+                                <th id='fileb_7' class="box-cell-f">G</th>
+                                <th id='fileb_8' class="box-cell-f">H</th>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col- ml-3">
+                        <div id="_message" class="alert alert-warning" role="alert">
+                            &nbsp;
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-3">
+                        <span id="_offline" data-toggle="tooltip" title="Offline match - 2 player" class="badge badge-pill badge-secondary">Offline</span>
+                        <span id="_online" data-toggle="tooltip" title="Online match - 2 player" class="badge badge-pill badge-success">Online</span>
+                    </div>
+                    <div id="_showIfOnline" class="col-8 ml-3">
+                        <span id='_user1' class="badge badge-pill badge-light">Guest 1</span>
+                        <span id='_user2' class="badge badge-pill badge-dark">Guest 2</span>
+                        <span data-toggle="tooltip" title="Send message to opponent">
+                            <button id="_btnsendmessage" type="button" data-toggle="modal" data-target="#sendmessagemodel" class="btn btn-info ml-2 mr-2">Message</button>
+                        </span>
+                        <span data-toggle="tooltip" title="Ask to join on Whatsapp or send below key and join manually">
+                            <a id="_whatsappjoin" href="#" target="_blank" class="btn btn-success fa fa-whatsapp ml-3"></a>
+                        </span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4 btn-group" role="group" aria-label="Chess Play by">
+                        <span data-toggle="tooltip" title="Rest to Offline match - 2 player">
+                            <button id="_btnOffline" onclick="restart()" type="button" class="btn btn-secondary mr-2">Offline</button>
+                        </span>
+                        <span data-toggle="tooltip" title="Start Online match - 2 player (or enter reference key to join back as User1 (White))">
+                            <button id="_btnOnlineW" onclick="StartWhite()" data-toggle="modal" data-target="#newliveModel" type="button" class="btn btn-success mr-2">Start</button>
+                        </span>
+                    </div>
+                    <div class="col-8 input-group">
+                        <input id="gid" type="text" class="form-control" placeholder="Game Reference Share/Join" aria-label="Game Reference Share/Join" aria-describedby="btnGroupAddon">
+                        <div class="input-group-prepend">
+                            <span data-toggle="tooltip" title="Join Online match - as 2nd player (or join back as User2 (Black) - Must enter reference key )">
+                                <button id="_btnOnlineB" onclick="StartBlack()" data-toggle="modal" data-target="#newliveModel" type="button" class="btn btn-primary mr-2" id="btnGroupAddon">Join</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-2 col-md-2 col-sm-5">
+                <div class="row">
+                    <div class="col">
+                        <h5>Moves</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="_allmoves" class="col">
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-2 col-md-5 col-sm-5">
+                <div class="row">
+                    <div class="col">
+                        <h5>Statistics</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="_notonboardw" class="col">
+                    </div>
+                    <div id="_notonboardb" class="col">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live User Start Modal -->
+        <div class="modal fade" id="newliveModel" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!--<h4 class="modal-title">Modal Header</h4>-->
+                    </div>
+                    <div class="modal-body">
+                        <div><p>Your name.</p></div>
+                        <input id="_newuser" class="form-control" type="text" maxlength="30" />
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="Start()" class="btn btn-success" data-dismiss="modal">Start/Join</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Live User Start Modal -->
+        <!-- Send Message Modal -->
+        <div class="modal fade" id="sendmessagemodel" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!--<h4 class="modal-title">Modal Header</h4>-->
+                    </div>
+                    <div class="modal-body">
+                        <div><p>Provide your message here.</p></div>
+                        <textarea id="_messageText" class="form-control" maxlength="1000" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="SendMessage()" class="btn btn-success" data-dismiss="modal">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Send Message Modal -->
+
+    <script>
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="scripts/chess.js"></script>
+    <script src="scripts/chessboard.js"></script>
+</body>
+</html>

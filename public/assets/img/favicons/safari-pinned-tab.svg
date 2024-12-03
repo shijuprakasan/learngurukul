@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" width="181" height="172.245" viewBox="0 0 181.00 172.24" enable-background="new 0 0 181.00 172.24" xml:space="preserve">
+	<ellipse fill="#7B7B7B" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="94.2499" cy="116.87" rx="73.125" ry="33.5"/>
+	<ellipse fill="#B8B8B8" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="94.4999" cy="106.12" rx="73.125" ry="33.5"/>
+	<path fill="#00C800" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 48.2291,8.76563C 73.3749,-2.25519 112.375,-2.25519 136.729,8.76563C 161.083,19.7865 170.792,41.8281 180.5,63.8698L 122.125,63.8698L 101.633,117.62L 83.1325,117.62L 65.1251,63.8698L 0.5,63.8698C 11.7916,41.8281 23.0833,19.7865 48.2291,8.76563 Z "/>
+	<path fill="#000000" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 135.902,160.722L 131.425,159.544L 131.268,161.822L 136.217,162.922L 135.902,160.722 Z "/>
+	<g>
+		<path fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 89.0982,152.221L 101.189,148.989L 97.9016,158.511L 85.8108,161.743L 89.0982,152.221 Z "/>
+		<path fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 89.8486,161.078L 94.3256,159.9L 94.4826,162.178L 89.5344,163.277L 89.8486,161.078 Z "/>
+		<path fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 86.4312,163.31C 87.7052,158.976 89.5564,155.703 90.5661,155.999C 91.5758,156.296 91.3616,160.05 90.0877,164.385C 88.8138,168.719 86.9625,171.992 85.9528,171.695C 84.943,171.399 85.1572,167.644 86.4312,163.31 Z "/>
+		<path fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 89.9294,162.352C 91.2685,157.796 93.4122,154.414 94.7174,154.797C 96.0226,155.181 95.9952,159.185 94.6561,163.741C 93.317,168.297 91.1733,171.68 89.8681,171.296C 88.5629,170.912 88.5903,166.908 89.9294,162.352 Z "/>
+		<ellipse fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="87.45" cy="160.497" rx="4.46184" ry="11.2475"/>
+		<ellipse fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="88.2704" cy="147.578" rx="5.96529" ry="5.39328"/>
+	</g>
+	<g>
+		<path fill="#C80FA0" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 52.1036,150.855L 64.1944,147.623L 60.907,157.145L 48.8162,160.377L 52.1036,150.855 Z "/>
+		<path fill="#C80FA0" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 45.9543,158.503C 50.4721,158.503 54.1343,159.356 54.1343,160.409C 54.1343,161.461 50.472,162.314 45.9543,162.314C 41.4366,162.314 37.7743,161.461 37.7743,160.409C 37.7743,159.356 41.4365,158.503 45.9543,158.503 Z "/>
+		<path fill="#C80FA0" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 47.8599,161.589C 52.6086,161.589 56.4582,162.692 56.4582,164.053C 56.4582,165.413 52.6086,166.516 47.8599,166.516C 43.1112,166.516 39.2615,165.413 39.2615,164.053C 39.2615,162.692 43.1112,161.589 47.8599,161.589 Z "/>
+		<path fill="#C80FA0" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 52.854,159.712L 57.331,158.534L 57.4881,160.812L 52.5398,161.911L 52.854,159.712 Z "/>
+		<ellipse fill="#C80FA0" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="41.2136" cy="154.432" rx="4.46184" ry="11.2475"/>
+		<ellipse fill="#C80FA0" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="42.034" cy="141.513" rx="5.9653" ry="5.3933"/>
+	</g>
+	<g>
+		<path fill="#0096FF" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 136.653,151.865L 124.562,148.634L 127.849,158.156L 139.94,161.387L 136.653,151.865 Z "/>
+		<path fill="#0096FF" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 142.802,159.514C 138.284,159.514 134.622,160.367 134.622,161.419C 134.622,162.472 138.284,163.325 142.802,163.325C 147.32,163.325 150.982,162.472 150.982,161.419C 150.982,160.367 147.32,159.514 142.802,159.514 Z "/>
+		<path fill="#0096FF" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 140.896,162.6C 136.148,162.6 132.298,163.702 132.298,165.063C 132.298,166.423 136.148,167.526 140.896,167.526C 145.645,167.526 149.495,166.423 149.495,165.063C 149.495,163.702 145.645,162.6 140.896,162.6 Z "/>
+		<ellipse fill="#0096FF" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="147.543" cy="155.442" rx="4.46184" ry="11.2475"/>
+		<path fill="#0096FF" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 146.722,137.13C 143.428,137.13 140.757,139.545 140.757,142.523C 140.757,145.502 143.428,147.917 146.722,147.917C 150.017,147.917 152.688,145.502 152.688,142.523C 152.688,139.545 150.017,137.13 146.722,137.13 Z "/>
+	</g>
+	<g>
+		<rect x="77.6249" y="127.078" fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" width="9" height="11.5"/>
+		<g>
+			<ellipse fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="90.72" cy="107.37" rx="7.96626" ry="16.908"/>
+			<ellipse fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="87.3059" cy="121.351" rx="12.681" ry="4.22699"/>
+			<ellipse fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="96.8979" cy="121.351" rx="12.681" ry="4.22699"/>
+			<ellipse fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" cx="89.8887" cy="86.3143" rx="7.73618" ry="7.73618"/>
+		</g>
+		<path fill="#FFFF00" fill-opacity="1" stroke-linejoin="round" stroke="#000000" stroke-opacity="1" d="M 53.3976,118.078L 89.3067,118.078L 101.125,133.078L 65.2158,133.078L 53.3976,118.078 Z "/>
+	</g>
+</svg>
